@@ -1,9 +1,6 @@
 body {
 	margin: 0;
 	padding: 0;
-	background: url(../images/grid-18px-masked.png);
-	background-repeat: repeat-x;
-	background-position: 0 0px;
 }
 
 header div {
@@ -34,4 +31,12 @@ header h1:before {
 
 .no-border-radius {
 	border-radius: 0px;
+}
+
+.no-background-color {
+	background: none;
+}
+
+footer {
+	border-top: 1px dashed #CCCCCC;
 }
