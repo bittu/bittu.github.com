@@ -2491,12 +2491,9 @@ table .span24 {
   background-color: #f5f5f5;
   border: 1px solid #eee;
   border: 1px solid rgba(0, 0, 0, 0.05);
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
 }
 
 .well blockquote {
@@ -3213,6 +3210,7 @@ input[type="submit"].btn.btn-mini {
 .nav > li > a:hover {
   text-decoration: none;
   background-color: #eeeeee;
+  border-left:inherit;
 }
 
 .nav > .pull-right {
@@ -3245,10 +3243,15 @@ input[type="submit"].btn.btn-mini {
   margin-right: -15px;
   margin-left: -15px;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  border-bottom:1px solid #282a2c;
 }
 
 .nav-list > li > a {
   padding: 3px 15px;
+  padding-top:5px;
+  padding-bottom:5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .nav-list > .active > a,
@@ -4960,14 +4963,14 @@ a.badge:hover {
   font-size: 60px;
   line-height: 1;
   letter-spacing: -1px;
-  color: inherit;
+  color: #33B5E5;
 }
 
 .hero-unit p {
   font-size: 18px;
   font-weight: 200;
   line-height: 27px;
-  color: inherit;
+  color: #33B5E5;
 }
 
 .pull-right {

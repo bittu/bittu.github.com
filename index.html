@@ -9,84 +9,113 @@
 
 	<meta name="viewport" content="width=device-width">
 	
+	<script type="text/javascript">
+		
+		window.onload = function(){
+			document.getElementById('loading').style.display = "none";
+			document.getElementById('main').style.display = "block";
+		};
+		
+	</script>
+	
 	<link rel="stylesheet"
-		href="//fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic,bold" title="roboto">
+			href="//fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic,bold" title="roboto">
 
 	<link rel="stylesheet" href="stylesheets/bootstrap.css">
 	<link rel="stylesheet" href="stylesheets/bootstrap-responsive.css">
-
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-
+	<link rel="stylesheet" href="stylesheets/stylesheet.css">
+	<link rel="stylesheet" href="stylesheets/font-awesome.css">
+	<!--[if IE 7]>
+		<link rel="stylesheet" href="stylesheets/font-awesome-ie7.css">
+	<![endif]-->
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <!--
-	<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-	-->
-
 	<script src="javascripts/modernizr-2.5.3-respond-1.1.0.min.js"></script>
     <title>Bittu.github.com by bittu</title>
   </head>
 
   <body>
 
+	<div id="loading">
+		<div class="block">
+			<div class="centered">
+				<img src="images/octocat-spinner-64.gif">
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		document.getElementById('loading').style.height = (document.height-100)+"px";
+	</script>
+	<div id="main">
     <header>
-      <div class="hero-unit no-border-radius no-background-color">
-        <h1>Bittu.github.com</h1>
-        <h2>My GitHub Page</h2>
-
-        <section id="downloads">
-          <a href="https://github.com/bittu" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
-      </div>
+		<div class="well ics-border-bottom">
+			<h1>bittu.github.com</h1>
+		</div>
     </header>
 
-    <div class="container">
-		<ul class="thumbnails">
-			<li class="span4">
-				<div class="thumbnail thumbBg no-border-radius">
-					<a href="#">
-						<img class="pull-left" src="images/logo.jpg">	
-						<div class="summary">
-							<h2>folderGrid</h2>
-							<p>folderGrid - a jQuery Plugin</p>
-						</div>
-						<div class="clearfix"></div>
-					</a>
-				</div>
-			</li>
-			<li class="span4">
-				<div class="thumbnail thumbBg no-border-radius">
-					<a href="#">
-						<img class="pull-left" src="images/logo.jpg">	
-						<div class="summary">
-							<h2>SORTER Plugin</h2>
-							<p>table sorter - a twitter Bootstrap Plugin</p>
-						</div>
-						<div class="clearfix"></div>
-					</a>
-				</div>
-			</li>
-			<li class="span4">
-				<div class="thumbnail thumbBg no-border-radius">
-					<div class="summary">
-						<h2>Period</h2>
-						<p>&nbsp;</p>
+    <div class="container-fluid">
+		
+		<div class="row-fluid">
+			<div class="span8 filler">
+				<div class="block">
+					<div class="centered">
+						<span class="opensource ics-font-black">Open Source</span>
+						<br /><br />
+						<hr />
+						<br /><br />
+						<span class="rules"><span class="badge badge-info">Rules</span> without <span class="badge badge-info">Rules</span></span>
 					</div>
-					<div class="clearfix"></div>
 				</div>
-			</li>
-		</ul>
+			</div>
+			<div class="span3">
+				<h2 class="page-header">Projects</h2>
+				<ul class="nav nav-list">
+					<li style="padding-left:10px;border-left:2px solid #33B5E5;">
+						<a href="#">
+							folderGrid
+							<br />
+							a jQuery Plugin
+						</a>
+					</li>
+					<li style="padding-left:10px;border-left:2px solid #33B5E5;">
+						<a href="#">
+							SORTER
+							<br />
+							a twitter bootstrap Plugin
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
     </div>
 	
-	<footer>
-		<div class="well no-background-color">
-			<p>&copy; Sandeep Vemula <i>aka</i> bittu 2012</p>
-		</div>
+	<footer class="navbar-fixed-bottom">
+		<div class="footer ics-border-top">
+			<p class="pull-left">&copy; Sandeep Vemula <i>aka</i> bittu 2012. </p>
+			<p>&nbsp;&nbsp;Powered By 
+				<a href="https://www.github.com"><i class="icon-github"> </i> Github</a>
+			</p>
+			</div>
 	</footer>
 
+	</div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="javascripts/jquery-1.7.2.min.js"><\/script>')</script>
 
 	<script src="javascripts/bootstrap.min.js"></script>
 
+	<script type="text/javascript">
+		
+		function sizing() {
+			var headerheight=$("header").height();
+			var containerheight=$(".container-fluid").height();
+			var footerheight=$("footer").height();			
+			$(".centered").height(($(window).height()-headerheight-footerheight-150)+"px");
+		}
+		
+		$(document).ready(sizing);
+		$(window).resize(sizing);
+		
+	</script>
   </body>
 </html>

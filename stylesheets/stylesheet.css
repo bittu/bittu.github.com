@@ -1,42 +1,154 @@
-body {
-	margin: 0;
-	padding: 0;
+html, body {
+	height: 100%;
 }
 
-header div {
-	border-bottom: 1px dashed #CCCCCC;
+body {
+	background: url(../images/pattern1.jpg);
+	margin: 0;
+}
+
+#main {
+	display: none;
+}
+
+header {
+	width: 100%;
+}
+
+.ics-border-bottom {
+	border-bottom: 1px solid #33B5E5;
+	-webkit-box-shadow: inset 0 0 1px 0 #fff, 0 0 1px 1px rgba(0,0,0,.1);
+	   -moz-box-shadow: inset 0 0 1px 0 #fff, 0 0 1px 1px rgba(0,0,0,.1);
+			box-shadow: inset 0 0 1px 0 #fff, 0 0 1px 1px rgba(0,0,0,.1);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); /* IE6-9 */
+}
+
+.ics-border-top {
+	border-top: 1px solid #33B5E5;
+	/*-webkit-box-shadow: inset 0 -1px 0 1px #fff, 0 -1px 0 1px rgba(0,0,0,.1);
+	   -moz-box-shadow: inset 0 -1px 0 1px #fff, 0 -1px 0 1px rgba(0,0,0,.1);
+			box-shadow: inset 0 -1px 0 1px #fff, 0 -1px 0 1px rgba(0,0,0,.1);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); /* IE6-9 */
+}
+
+header h1 {
+	color: #33B5E5;
 }
 
 header h1:before {
-	content: "./ ";
-	font-size: 60px;
+  content: "./ ";
+  font-size: 24px;
 }
 
-.thumbBg {
-	background: url(../images/grid-18px-masked.png) repeat;
-	height: 100px;
+.ics-font-blue {
+	color: #33B5E5;
 }
 
-.thumbBg img {
-	padding: 20px;
+.ics-font-grey {
+	color: #555555;
 }
 
-.thumbBg .summary {
-	padding: 20px;
+.ics-font-black {
+	color: #222222;
 }
 
-.thumbBg:hover {
+.footer {
+	padding: 20px 0 20px 20px;
+	margin-bottom: 0;
 	background-color: whiteSmoke;
 }
 
-.no-border-radius {
+.footer p {
+	margin-bottom: 0px;
+}
+
+.footer i{
+	line-height: 20px;
+}
+
+::-webkit-selection,
+::-moz-selection,
+::selection {
+  background-color: #0099cc;
+  color: #fff; }
+  
+.block {
+	display: table;
+	width: 100%;
+}
+
+.centered {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.opensource {
+	font-size: 60px;
+}
+
+.opensource:before {
+	content: "{{ ";
+	color: #33B5E5;
+}
+
+.opensource:after {
+	content: " }}";
+	color: #33B5E5;
+}
+
+.rules {
+	font-size: 40px;
+}
+
+.badge {
+	font-size: 40px;
 	border-radius: 0px;
+	font-style: italic;
 }
 
-.no-background-color {
-	background: none;
+@media (max-width: 767px) {
+	.opensource {
+		font-size: 40px;
+	}
+	
+	.rules {
+		font-size: 30px;
+	}
+	
+	.badge {
+		font-size: 30px;
+	}
 }
 
-footer {
-	border-top: 1px dashed #CCCCCC;
+@media (min-width: 768px) and (max-width: 979px) {
+	.opensource {
+		font-size: 54px;
+	}
+	
+	.rules {
+		font-size: 36px;
+	}
+	
+	.badge {
+		font-size: 36px;
+	}
+}
+
+@media (max-width: 480px) {
+	.well h1 {
+		font-size: 	20px;
+	}
+	
+	.opensource {
+		font-size: 22px;
+	}
+	
+	.rules {
+		font-size: 15px;
+	}
+	
+	.badge {
+		font-size: 15px;
+	}
 }
