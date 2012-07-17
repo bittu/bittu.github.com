@@ -10,6 +10,14 @@
 	<meta name="viewport" content="width=device-width">
 	
 	<script type="text/javascript">
+		function getDocHeight() {
+			var D = document;
+			return Math.max(
+				Math.max(D.body.scrollHeight, D.documentElement.scrollHeight),
+				Math.max(D.body.offsetHeight, D.documentElement.offsetHeight),
+				Math.max(D.body.clientHeight, D.documentElement.clientHeight)
+			);
+		}
 		
 		window.onload = function(){
 			document.getElementById('loading').style.display = "none";
@@ -43,7 +51,7 @@
 		</div>
 	</div>
 	<script type="text/javascript">
-		document.getElementById('loading').style.height = (document.height-100)+"px";
+		document.getElementById('loading').style.height = (getDocHeight()-100)+"px";
 	</script>
 	<div id="main">
     <header>
@@ -70,14 +78,14 @@
 				<h2 class="page-header">Projects</h2>
 				<ul class="nav nav-list">
 					<li style="padding-left:10px;border-left:2px solid #33B5E5;">
-						<a href="#">
+						<a href="/folderGrid">
 							folderGrid
 							<br />
 							a jQuery Plugin
 						</a>
 					</li>
 					<li style="padding-left:10px;border-left:2px solid #33B5E5;">
-						<a href="#">
+						<a href="/bootstrap-sorter">
 							SORTER
 							<br />
 							a twitter bootstrap Plugin
