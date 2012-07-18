@@ -22,6 +22,7 @@
 		window.onload = function(){
 			document.getElementById('loading').style.display = "none";
 			document.getElementById('main').style.display = "block";
+			sizing();
 		};
 		
 	</script>
@@ -39,6 +40,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
 	<script src="javascripts/modernizr-2.5.3-respond-1.1.0.min.js"></script>
     <title>Bittu.github.com by bittu</title>
+	
   </head>
 
   <body>
@@ -57,6 +59,14 @@
     <header>
 		<div class="well ics-border-bottom">
 			<h1>bittu.github.com</h1>
+			<div class="pull-right">
+				<div class="btn-group">
+					<a href="https://github.com/bittu/repositories" class="btn">
+						<small>Watch</small>
+						<h5>REPOS</h5>
+					</a>
+				</div>
+			</div>
 		</div>
     </header>
 
@@ -64,46 +74,93 @@
 		
 		<div class="row-fluid">
 			<div class="span8 filler">
-				<div class="block">
-					<div class="centered">
+				<div class="block" style="position: relative;">
+					<div class="centered" id="flap1">
+						<span class="opensource ics-font-black" rel="tooltip"
+							data-title="<h3>are free to <br /><em>use</em> <small>and</small> <em>re-distribute</em></h3>">Open Source</span>
+						<br /><br />
+						<hr />
+						<br /><br />
+						<span class="rules"><span class="badge badge-info" rel="tooltip"
+							data-title="<h3>rules world</h3>">Rules</span> without <span class="badge badge-info" rel="tooltip"
+								data-title="<h3>has no rules</h3>">Rules</span></span>
+						<!--
+						<a class="control" data-toggle="up" href="#"><i class="icon-chevron-down"></i></a>
+						-->
+					</div>
+					<!--
+					<div class="centered" id="flap2" style="display: none;">
 						<span class="opensource ics-font-black">Open Source</span>
 						<br /><br />
 						<hr />
 						<br /><br />
 						<span class="rules"><span class="badge badge-info">Rules</span> without <span class="badge badge-info">Rules</span></span>
+						<a class="top control" data-toggle="down" href="#"><i class="icon-chevron-up"></i></a>
 					</div>
+					-->					
 				</div>
 			</div>
 			<div class="span3">
 				<h2 class="page-header">Projects</h2>
 				<ul class="nav nav-list">
 					<li style="padding-left:10px;border-left:2px solid #33B5E5;">
-						<a href="/folderGrid">
+						<a href="/folderGrid" rel="tooltip" data-title="<h4>- a jQuery Plugin used for dynamic creation of folders and files structure in grid format.</h4>" data-placement="left">
 							folderGrid
 							<br />
-							a jQuery Plugin
+							- a jQuery Plugin
 						</a>
 					</li>
 					<li style="padding-left:10px;border-left:2px solid #33B5E5;">
-						<a href="/bootstrap-sorter">
-							s
+						<a href="/bootstrap-sorter" rel="tooltip" data-title="<h4>- a twBootstrap flavoured light-weight plugin which applies sorting on a table.</h4>" data-placement="left">
+							sorter
 							<br />
-							a twitter bootstrap Plugin
+							- a twitter bootstrap Plugin
 						</a>
 					</li>
+				</ul>
+			</div>
+			<div class="span3">
+				<h2 class="page-header">About <small> me, ofcourse</small></h2>
+					<blockquote>
+						<img src="images/li_scaled_profile_picture.jpg" alt="me" width="30%" class="pull-left" style="padding-right: 10px;">
+						<h3>
+							Sandeep Vemula
+							<br />
+							<small>bittu</small>
+						</h3>
+						<div class="clearfix"></div>
+						<hr />
+						<h3>a web-dev <small>{.js}, {.java}, {.html}, {.css}</small><h3>
+						<h3>a passionate 
+							<small>
+								<img src="images/android.jpg" alt="android"> 
+								&nbsp; , 
+								<span style="text-decoration: line-through;">&nbsp;&nbsp;ios&nbsp;&nbsp;</span>
+							</small>
+						<h3>
+					</blockquote>
+				
 				</ul>
 			</div>
 		</div>
 		
     </div>
 	
-	<footer class="navbar-fixed-bottom">
+	<footer>
 		<div class="footer ics-border-top">
 			<p class="pull-left">&copy; Sandeep Vemula <i>aka</i> bittu 2012. </p>
 			<p>&nbsp;&nbsp;Powered By 
 				<a href="https://www.github.com"><i class="icon-github"> </i> Github</a>
 			</p>
+			<div style="position: relative">
+				<div style="position: absolute; bottom: 1%; right: 2%; top: auto; left: auto;">
+					<a href="https://plus.google.com/u/0/114680945670891585315"><i class="icon-google-plus social"></i></a>
+					<a href="https://www.facebook.com/bittu4u4ever"><i class="icon-facebook social"></i></a>
+					<a href="https://twitter.com/bittu4u4ever"><i class="icon-twitter social"></i></a>
+					<a href="http://www.linkedin.com/profile/view?id=55051662"><i class="icon-linkedin social"></i></a>
+				</div>
 			</div>
+		</div>
 	</footer>
 
 	</div>
@@ -118,10 +175,33 @@
 			var headerheight=$("header").height();
 			var containerheight=$(".container-fluid").height();
 			var footerheight=$("footer").height();			
-			$(".centered").height(($(window).height()-headerheight-footerheight-150)+"px");
+			$(".centered").height(($(window).height()-headerheight-footerheight-100)+"px");
 		}
+
+		$(document).ready( function() {
+/*			
+			$('.control').on('click', function() {
+				var $this = $(this);
+				if($this.data('toggle')==="up") {
+					$('#flap1').slideUp('slow', function(){
+						$('#flap2').fadeIn();
+					});
+					
+				}
+				else {
+					$('#flap2').fadeOut(function(){
+						$('#flap1').slideDown();
+					});
+					
+				}
+				return false;
+			});
+*/
+			$('[rel=tooltip]').tooltip({
+				placement: 'bottom'
+			});
+		});
 		
-		$(document).ready(sizing);
 		$(window).resize(sizing);
 		
 	</script>
