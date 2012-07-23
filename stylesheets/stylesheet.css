@@ -150,8 +150,8 @@ blockquote {
 }
 
 .projects {
-	padding-left:10px;
-	border-left:2px solid #33B5E5;
+	padding-left: 10px;
+	border-left: 2px solid #33B5E5;
 }
 
 @media (max-width: 767px) {
