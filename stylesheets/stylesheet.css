@@ -117,6 +117,18 @@ blockquote {
 	padding: 10px;
 }
 
+.social:hover {
+	color: #33B5E5;
+}
+
+.social-bar {
+	position: absolute;
+	bottom: 1%;
+	right: 2%;
+	top: auto;
+	left: auto;
+}
+
 .control {
 	position: absolute;
 	top: auto;
@@ -137,6 +149,11 @@ blockquote {
 	top: 3%;
 }
 
+.projects {
+	padding-left:10px;
+	border-left:2px solid #33B5E5;
+}
+
 @media (max-width: 767px) {
 	.opensource {
 		font-size: 40px;
@@ -148,6 +165,10 @@ blockquote {
 	
 	.badge {
 		font-size: 30px;
+	}
+	
+	.social-bar {
+		position: relative;
 	}
 }
 
@@ -184,5 +205,9 @@ blockquote {
 	
 	.control {
 		font-size: 25px;
+	}
+	
+	.social-bar {
+		position: relative;
 	}
 }
