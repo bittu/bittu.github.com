@@ -139,7 +139,7 @@ blockquote {
 	position: absolute;
 	top: auto;
 	bottom: 1%;
-	right: 1%;
+	left: 45%;
 	width: 40px;
 	height: 40px;
 	margin-top: -20px;
@@ -150,6 +150,10 @@ blockquote {
 	opacity: 0.5;
 	filter: alpha(opacity=50);
 }
+
+#projects {
+	-moz-transition: bottom 2s ease-in 3s;
+}
 		
 .top {
 	top: 3%;
@@ -159,6 +163,72 @@ blockquote {
 	padding-left: 10px;
 	border-left: 2px solid #33B5E5;
 }
+
+ul {
+    list-style: none outside none;
+}
+
+li.repo {
+    height: 250px;
+    width: 220px;
+	background: none repeat scroll 0 0 rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+	display: inline;
+    float: left;
+    margin-left: 40px;
+    margin-right: 40px;
+    position: relative;
+}
+
+li.repo > a {
+    color: inherit;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    text-decoration: none;
+    width: 100%;
+}
+
+a:link, a:visited {
+    color: #0084B4;
+    text-decoration: none;
+}
+
+li.repo h2 {
+    margin-bottom: 2px;
+    max-width: 160px;
+    overflow: hidden;
+	color: #0084B4;
+    font-size: 20px;
+    font-weight: bold;
+	word-wrap: break-word;
+}
+li.repo h2, li.repo h3, li.repo p {
+    margin: 10px 15px;
+}
+
+li.repo h3 {
+    color: #999999;
+    font-size: 11px;
+    margin-bottom: 15px;
+    margin-top: 2px;
+}
+
+.repo:after {
+    border-bottom: 50px solid transparent;
+    border-left: 50px solid transparent;
+    border-right: 50px solid #0080B0;
+    content: "";
+    height: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+}
+
+
 
 @media (max-width: 767px) {
 	.opensource {
@@ -215,5 +285,11 @@ blockquote {
 	
 	.social-bar {
 		position: relative;
+	}
+	
+	li.repo {
+		width: 200px;
+		margin-left: 20px;
+		margin-right: 20px;
 	}
 }

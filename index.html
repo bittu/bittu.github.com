@@ -96,6 +96,7 @@
 					-->					
 				</div>
 			</div>
+			<!--
 			<div class="span3">
 				<h2 class="page-header">Projects <small> the, so called repos</small></h2>
 				<ul class="nav nav-list">
@@ -136,6 +137,7 @@
 					</li>
 				</ul>
 			</div>
+			-->
 			<div class="span3">
 				<h2 class="page-header">About <small> me, ofcourse</small></h2>
 					<blockquote>
@@ -160,7 +162,48 @@
 				</ul>
 			</div>
 		</div>
-		
+		<div class="span-11" id="projects">
+			<h2 class="page-header">Projects <small> the, so called repos</small></h2>
+			<ul class="nav" id="repos">
+			<!--
+				<li class="repo">
+					<a href="/folderGrid">
+					<h2>folderGrid</h2>
+					<h3>- a jQuery Plugin</h3>
+					<p>a jQuery Plugin used for dynamic creation of folders and files structure in grid format.</p>
+					</a>
+				</li>
+				<li class="repo">
+					<a href="/bootstrap-sorter">
+					<h2>sorter</h2>
+					<h3>- a twitter bootstrap Plugin</h3>
+					<p>a twBootstrap flavoured light-weight plugin which applies sorting on a table.</p>
+					</a>
+				</li>
+				<li class="repo">
+					<a href="/multicheck">
+					<h2>multicheck</h2>
+					<h3>- a jQuery Plugin</h3>
+					<p>a jQuery plugin for grouping checkboxes with a parent checkbox of similar type.</p>
+					</a>
+				</li>
+				<li class="repo">
+					<a href="/JBThemes.ordered-list">
+					<h2>ordered-list</h2>
+					<h3>- a theme for jekyll bootstrap</h3>
+					<p>Ordered-list theme for Jekyll + Jekyll-Bootstrap. inspired from www.orderedlist.com.</p>
+					</a>
+				</li>
+				<li class="repo">
+					<a href="/JBThemes.the-blog">
+					<h2>the-blog</h2>
+					<h3>- a theme for jekyll bootstrap</h3>
+					<p>a blog theme for Jekyll + Jekyll-Bootstrap. inspired from dynamic themes for blogger.</p>
+					</a>
+				</li>
+			-->
+			</ul>
+		</div>
     </div>
 	
 	<footer>
@@ -181,9 +224,20 @@
 	</footer>
 
 	</div>
+	
+	<script id="sampleTemplate" type="text/x-jquery-tmpl">
+		<li class="repo">
+			<a href="${homepage}">
+				<h2>${name}</h2>
+				<h3>${caption}</h3>
+				<p>${description}</p>
+			</a>
+		</li>
+	</script>
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="javascripts/jquery-1.7.2.min.js"><\/script>')</script>
-
+	<script src="javascripts/jquery.tmpl.min.js"></script>
 	<script src="javascripts/bootstrap.min.js"></script>
 
 	<script type="text/javascript">
@@ -198,25 +252,50 @@
 		$(document).ready( function() {
 /*			
 			$('.control').on('click', function() {
-				var $this = $(this);
-				if($this.data('toggle')==="up") {
-					$('#flap1').slideUp('slow', function(){
-						$('#flap2').fadeIn();
-					});
-					
-				}
-				else {
-					$('#flap2').fadeOut(function(){
-						$('#flap1').slideDown();
-					});
-					
-				}
+				$('#projects').show();
+				window.location.href += "#projects";
 				return false;
 			});
 */
 			$('[rel=tooltip]').tooltip({
 				placement: 'bottom'
 			});
+			
+			var excludeRepoNames = ["bittu.github.com", "bootstrap-backbone-table-test"];
+	
+			var captions = {
+				"folderGrid": "a jQuery Plugin"
+				,"bootstrap-sorter": "a twitter bootstrap Plugin"
+				,"multicheck": "a jQuery Plugin"
+				,"JBThemes.ordered-list": "a theme for jekyll bootstrap"
+				,"JBThemes.the-blog": "a theme for jekyll bootstrap"
+			};
+			
+			function excludePrepareRepoObjects(data) {
+				var moddedData = [];
+				
+				for(var key in data) {
+					var repo = data[key];
+					
+					if($.inArray(repo.name, excludeRepoNames) === -1) {
+						repo.caption = captions[repo.name];
+						moddedData.push(repo);
+					}
+				}
+				
+				return moddedData;
+			}
+			
+			function getRepos() {
+				$.getJSON("https://api.github.com/users/bittu/repos?callback=?"
+					, function(result) {
+						var moddedData = excludePrepareRepoObjects(result.data);
+						
+						$( "#sampleTemplate" ).tmpl( moddedData ).appendTo( "#repos" )
+				});
+			}
+			
+			getRepos();
 		});
 		
 		$(window).resize(sizing);
