@@ -228,6 +228,17 @@ li.repo h3 {
     width: 0;
 }
 
+.repo.jekyll::after {
+	border-right-color: black;
+}
+
+.repo.bootstrap::after {
+	border-right-color: #05C;
+}
+
+.repo.jquery::after {
+	border-right-color: #5DB0E6;
+}
 
 
 @media (max-width: 767px) {

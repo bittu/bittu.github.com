@@ -226,7 +226,7 @@
 	</div>
 	
 	<script id="sampleTemplate" type="text/x-jquery-tmpl">
-		<li class="repo">
+		<li class="repo ${classification}">
 			<a href="${homepage}">
 				<h2>${name}</h2>
 				<h3>${caption}</h3>
@@ -270,6 +270,14 @@
 				,"JBThemes.ordered-list": "a theme for jekyll bootstrap"
 				,"JBThemes.the-blog": "a theme for jekyll bootstrap"
 			};
+
+			var classifications = {
+				"folderGrid": "jquery"
+				,"bootstrap-sorter": "bootstrap"
+				,"multicheck": "jquery"
+				,"JBThemes.ordered-list": "jekyll"
+				,"JBThemes.the-blog": "jekyll"
+			};
 			
 			function excludePrepareRepoObjects(data) {
 				var moddedData = [];
@@ -279,6 +287,7 @@
 					
 					if($.inArray(repo.name, excludeRepoNames) === -1) {
 						repo.caption = captions[repo.name];
+						repo.classification = classifications[repo.name];
 						moddedData.push(repo);
 					}
 				}
