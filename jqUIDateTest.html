@@ -19,9 +19,11 @@
       $("#datepicker").datepicker({inline: false, beforeShowDay: changeBG});
     }
       
-      function changeBG(date) {
-        return [true, date < new Date() ? 'lessDate' : ''];
-      }
+    var d = new Date();
+    var d1 = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+    function changeBG(date) {
+      return [true, date < d1 ? 'lessDate' : ''];
+    }
     
     google.setOnLoadCallback(OnLoad);
 
