@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <title>jqUI Date Picker Test</title>
+    <style>
+      .lessDate {
+        background-color: red;
+      }
+
+    </style>
+    <script src="http://www.google.com/jsapi?key=AIzaSyA5m1Nc8ws2BbmPRwKu5gFradvD_hgq6G0" type="text/javascript"></script>
+    <script type="text/javascript">
+   
+    google.load("jquery", "1");
+    google.load("jqueryui", "1");
+    
+    function OnLoad(){     
+      $("#datepicker").datepicker({inline: false, beforeShowDay: changeBG});
+    }
+      
+      function changeBG(date) {
+        return [true, date < new Date() ? 'lessDate' : ''];
+      }
+    
+    google.setOnLoadCallback(OnLoad);
+
+    </script>
+  </head>
+  <body style="font-family: Arial;border: 0 none;">    
+    <input type="text" id="datepicker">
+  </body>
+</html>
+​
