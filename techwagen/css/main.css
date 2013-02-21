@@ -1,0 +1,233 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* GLOBAL STYLES
+    -------------------------------------------------- */
+    /* Padding below the footer and lighter body text */
+
+    body {      
+		color: #555;	  
+    }
+
+	.navbar-fixed-top {
+		position: relative;        
+	}
+
+    .navbar-fixed-top .navbar-inner {
+        min-height: 100px;
+    }
+
+    .navbar .brand {
+        padding-top: 15px;
+    }
+
+    .navbar .brand h3 {
+        padding-top: 15px;
+        display: inline;
+    }
+
+    .navbar-fixed-top .collapse {
+        height: 100px;
+    }
+	
+	.navbar-fixed-top .container {
+		height: 100px;		
+	}
+	
+	.navbar-fixed-top ul.nav, .navbar-fixed-top ul.nav > li {
+		height: 100px;
+	}
+	
+	.navbar .nav > li > a {
+		padding-top: 0;
+		padding-bottom: 0;
+		height: 100px;
+		line-height: 100px;
+		vertical-align: middle;
+	}
+	
+	.navbar .nav .dropdown-toggle .caret {
+		margin-top: 48px;
+	}
+	
+	.intro {
+        margin-top: 20px;
+    }
+	
+	.jumbotron {
+		margin: 60px 0;
+		text-align: center;
+	}
+	.jumbotron h1 {
+		font-size: 52px;
+		line-height: 1;
+	}
+
+	.testimonals small {
+		text-align: right;
+	}
+	
+	.footer-links > .dropdown-menu, .bs-docs-example-submenus .dropdown > .dropdown-menu {
+		display: block;
+		position: static;
+		margin-bottom: 5px;
+	}
+	
+	.footer-links .dropdown-menu {
+		border: 0px;
+		border-radius: 0px;
+		box-shadow: none;
+		background: transparent;
+	}
+	
+	.footer-wrapper .dropup .dropdown-submenu > .dropdown-menu {
+		top: -50px;
+		margin-top: 50%;
+	}
+	
+	.footer-wrapper .dropdown-menu > li > a:hover, .footer-wrapper .dropdown-menu > li > a:focus, .footer-wrapper .dropdown-submenu:hover > a, .footer-wrapper .dropdown-submenu:focus > a {
+		background-color: transparent;
+		background-image: none;
+		color: #999;
+	}
+
+	.footer-wrapper {
+		background-color: #e3e3e3;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #999;
+		box-shadow: 0 3px 7px rgba(0, 0, 0, .4) inset;
+		background-image: url(../img/seamlesstexture11_1200.jpg);
+	}
+	
+	footer {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		box-shadow: 0 3px 7px rgba(0, 0, 0, .4) inset;
+		background-color: #f5f5f5;
+		background-image: url(../img/seamlesstexture3_1200.jpg);
+	}
+	
+    /* MARKETING CONTENT
+    -------------------------------------------------- */
+	
+	.marketing {
+		border-bottom: 1px solid #999;
+		background-color: #f5f5f5;
+		box-shadow: 0 3px 7px rgba(0, 0, 0, .4) inset;
+		background-image: url(../img/seamlesstexture13_1200.jpg);
+	}
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .span3 {
+      text-align: center;
+    }
+    .marketing h2 {
+      font-weight: normal;
+    }
+    .marketing .span4 p {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+	
+	.marketing hr {
+		border-top: 1px solid #999;
+		border-bottom: 1px solid #eee;
+	}
+	
+	.testimonal:not(:first-child){		
+		opacity: 0;
+	}	
+
+    /* Featurettes
+    ------------------------- */
+
+    .featurette-divider {
+      margin: 80px 0; /* Space out the Bootstrap <hr> more */
+    }
+    .featurette {
+      padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+      overflow: hidden; /* Vertically center images part 2: clear their floats. */
+    }
+    .featurette-image {
+      margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+    }
+
+    /* Give some space on the sides of the floated elements so text doesn't run right into it. */
+    .featurette-image.pull-left {
+      margin-right: 40px;
+    }
+    .featurette-image.pull-right {
+      margin-left: 40px;
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-size: 50px;
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+
+
+    /* RESPONSIVE CSS
+    -------------------------------------------------- */
+	
+      .featurette {
+        height: auto;
+        padding: 0;
+      }
+      .featurette-image.pull-left,
+      .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 40%;
+        margin: 0 auto 20px;
+      }
+    
+	@media (max-width: 979px) {
+		.navbar-fixed-top .collapse {
+			height: 0;
+		}
+		.navbar-fixed-top .container {
+			height: auto;		
+		}
+		
+		.navbar-fixed-top ul.nav, .navbar-fixed-top ul.nav > li {
+			height: auto;
+		}
+		
+		.navbar .nav .dropdown-toggle .caret {
+			margin-top: 13px;
+		}
+		
+		.navbar .nav > li > a {
+			padding-top: 0;
+			padding-bottom: 0;			
+			float: none;
+			height: 30px;
+			line-height: 30px;
+			vertical-align: middle;
+		}
+	}
+
+
+    @media (max-width: 767px) {
+
+      .marketing .span4 + .span4 {
+        margin-top: 40px;
+      }
+
+      .featurette-heading {
+        font-size: 30px;
+      }
+      .featurette .lead {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+    }
