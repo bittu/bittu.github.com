@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+        <meta name="description" content="">
+        <meta name="author" content="">    
+        <meta name="viewport" content="width=device-width">
+        
+        <title>Redesign</title>
+        
+        <link rel="stylesheet"
+			href="//fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic,bold" title="roboto">
+        <link rel="stylesheet" href="css/metro-bootstrap.css">
+        <link rel="stylesheet" href="css/default.css">
+
+    </head>
+    <body data-spy="scroll" data-target=".navigation">
+        
+        <div id="main">            
+        <!--
+            <div class="navbar navbar-fixed-left">
+                <div class="navbar-inner">
+                    <div class="container">                       
+                        <div class="nav-collapse collapse">
+                            <ul class="nav">
+                                <li class="active"><a href="#about" data-role="scroll">About</a></li>
+                                <li class=""><a href="#work" data-role="scroll">Work</a></li>
+                                <li class=""><a href="#contact" data-role="scroll">Contact</a></li>
+                            </ul>
+                        </div>
+						 <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="/">bittu.github.com</a>
+                    </div>
+                </div>
+            </div>
+            -->
+            <!--
+            <div class="navbar navbar-fixed-left">
+                <div class="navbar-inner">
+                    <ul id="nav" class="nav">
+                        <li class="active"><a href="#about" data-role="scroll">About</a></li>
+                        <li class=""><a href="#work" data-role="scroll">Work</a></li>
+                        <li class=""><a href="#contact" data-role="scroll">Contact</a></li>
+                    </ul>
+                    <a class="brand" href="/">bittu.github.com</a>
+                </div>
+            </div>
+            -->
+            <div class="navigation">
+                <ul id="nav" class="nav">
+                    <li class="active"><a href="#about" data-role="scroll">About</a></li>
+                    <li class=""><a href="#work" data-role="scroll">Work</a></li>
+                    <li class=""><a href="#contact" data-role="scroll">Contact</a></li>
+                    <li class="brand"><a class="brand" href="/">./ bittu.github.com</a></li>
+                </ul>
+            </div>
+            <div class="container-fluid">
+                <section id="about">
+                    <div class="page-header">
+                        <h1>
+                            about,
+                            <small>me ofcourse</small>
+                        </h1>
+                    </div>
+                    <div class="row">
+                        <div class="span6">
+                            <blockquote class="bittu-quote">
+                                <h2>OpenSource, Rules without Rules
+                                Let's change the world
+                                <small>Sandeep Vemula</small>
+                                    </h2>
+                            </blockquote>
+                        </div>
+                        <div class="span5">
+                            <ul class="thumbnails pull-right">
+                                <li class="span3 tile"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span4 pull-right text-right">
+							<h4 class="">
+								<dl class="about">
+									<dt>-bittu</dt>
+									<dd></dd>
+									<dt>-a web-dev</dt>
+									<dd>{.html} {.css} {.js} {.java} {.php}</dd>
+									<dt>-a passionate</dt>
+									<dd>{android} {ios} {8}</dd>
+								</dl>
+							</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span4">
+                        <blockquote>
+                            <p>
+                                The Internet is the Viagra of big business
+                                <small> Jack Welch, Chairman and CEO, General Electric</small>
+                            </p>
+                        </blockquote>
+                            </div>
+                    </div>
+                </section>
+                <section id="work">
+					<div class="page-header">
+                        <h1>
+                            work,
+                            <small>the portfolio</small>
+                        </h1>
+                    </div>
+					<div class="row">
+					<ul class="thumbnails">
+                        <li class="span3 tile"></li>
+						<li class="span3 tile"></li>
+						<li class="span3 tile"></li>
+						<li class="span3 tile"></li>
+						<li class="span3 tile"></li>
+						<li class="span3 tile"></li>
+						<li class="span3 tile"></li>
+						<li class="span3 tile"></li>
+                    </ul>
+					</div>
+				</section>
+                <section id="contact">
+					<div class="page-header">
+                        <h1>
+                            contact,
+                            <small> me</small>
+                        </h1>
+                    </div>
+					<form class="form-horizontal">
+					  <fieldset>
+						<div class="control-group">
+						  <label class="control-label" for="contactName">Name</label>
+						  <div class="controls">
+							<input type="text" class="input-xlarge" id="contactName">							
+						  </div>
+						</div>
+						<div class="control-group">
+						  <label class="control-label" for="contactEmail">Email</label>
+						  <div class="controls">
+							<input type="text" class="input-xlarge" id="contactEmail">							
+						  </div>
+						</div>
+						<div class="control-group">
+						  <label class="control-label" for="contactMessage">Message</label>
+						  <div class="controls">
+							<textarea class="input-xlarge" id="contactMessage"></textarea>							
+						  </div>
+						</div>
+						<div class="form-actions">
+							<input type="submit" class="btn btn-large btn-primary" value="Submit">
+							<input class="btn btn-large" type="reset">
+						</div>
+					  </fieldset>
+					</form>
+				</section>
+                
+            
+                <footer class="footer">
+                    <p>Copyright &copy; 2013 @ Sandeep Vemula <i>aka</i> bittu</p>
+                </footer>
+            </div>
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script type="text/javascript">
+            window.jQuery || document.write('<script type="text/javascript" src="js/jquery-1.9.0.min.js"><\/script>')
+        </script>
+        <script src="js/jquery.easing.1.3.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                
+                var $main = $("#main");
+                
+                $("a[data-role=scroll]").click(function(){
+                    var $el = $("#"+$(this).data("click"));
+                    var leftOffset = $el.offset().left;
+                    var mainLeftOffset = $main.offset().left;
+                    $("#main").animate({ left: mainLeftOffset-leftOffset }, 1000, 'easeOutBounce');
+                    return false;
+                });
+                
+            });
+          
+        </script>
+        
+        <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-38610898-1']);
+          _gaq.push(['_trackPageview']);
+        
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        
+        </script>
+                
+    </body>
+</html>
