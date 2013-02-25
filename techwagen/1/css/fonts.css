@@ -1,0 +1,10 @@
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */ 
+@font-face {
+    font-family:"EnigmaticBold";
+    src:url("EnigmaB_2.eot?") format("eot"),
+        url("EnigmaB_2.woff") format("woff"),
+        url("EnigmaB_2.ttf") format("truetype"),
+        url("EnigmaB_2.svg#EnigmaticBold") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
