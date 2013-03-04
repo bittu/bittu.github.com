@@ -1,7 +1,12 @@
 /* custom */
 
+html, body {
+	height: 100%;
+}
+
 body {
     background: url(../img/noisy_grid.png);
+	overflow: hidden;
 }
 
 .brand {
@@ -13,6 +18,18 @@ body {
 	margin: 0;
 }
 
+blockquote {
+	border-left-color: #999; 
+}
+
+#main {
+	height: 100%;
+}
+
+
+.container-fluid, .container-fluid section {
+	height: 100%;
+}
 
 .container-fluid section:not(:first-child) {
 	margin-top: 20px;
@@ -26,16 +43,27 @@ body {
     border-bottom: 1px solid #999;
 }
 
+#hover {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background: #CCC;
+	z-index: 10001;
+}
+
 #nav {
     width: 96px;
     height: 100%;
     position: fixed;
-    left: 0;
-    background: url('images/navbg.png') repeat;
+    left: 0;    
     z-index: 100;
     font-family: 'StrangeLove';
     font-weight: normal;
     background: rgba(255, 255, 255, 0.9);
+	-webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+	-moz-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+	-o-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+	-ms-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
     margin-left: 0;
 }
@@ -46,11 +74,14 @@ body {
     float: left;
     list-style: none;
     color: #fff;
-    text-align: center;
-    font-weight: bold;
+    text-align: center;    
     padding: 0 10px 0 0;
     margin-bottom: 10px;
-    -webkit-transform: rotate(270deg);
+	-webkit-transform: rotate(270deg);
+	-moz-transform: rotate(270deg);
+	-o-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+    transform: rotate(270deg);
     font-family: "Segoe UI Light","Helvetica Neue","Segoe UI","Segoe WP",sans-serif;
     font-weight: 100;
     text-transform: lowercase;
@@ -62,14 +93,13 @@ body {
 #nav li a {
     color: #ccc;
     text-decoration: none;
-    display: block;
-    height: 35px;
-    width: 100px;
-    padding-top: 55px;
+    display: block;    
     -webkit-box-shadow: none;
-    box-shadow: none;   
+	-moz-box-shadow: none;
+	-o-box-shadow: none;
+	-ms-box-shadow: none;
+    box-shadow: none;
     cursor: auto;
-    display: block;
     float: none;
     font-family: 'Segoe UI Light', 'Helvetica Neue', 'Segoe UI', 'Segoe WP', sans-serif;
     font-size: 25px;
@@ -84,8 +114,7 @@ body {
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 10px;
-    text-align: left;
-    text-decoration: none;
+    text-align: left;    
     text-shadow: rgba(0, 0, 0, 0) 0px 0px 0px;
     text-transform: lowercase;
     width: 92px;
@@ -115,6 +144,10 @@ body {
 	top: 0;
 	height: 100% !important;
     width: 100px;
+	-webkit-box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
+	-o-box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
+	-ms-box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
     box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
     background: url(../img/tiny_grid.png);
 }
@@ -139,17 +172,219 @@ body {
 	margin: 5px 0 0;
 	text-align: center;
     float: left;
-	-webkit-transform: rotate(270deg);  
-        -moz-transform: rotate(270deg);
-        -ms-transform: rotate(270deg);
-        -o-transform: rotate(270deg);
-        transform: rotate(270deg);  
+    -webkit-transform: rotate(270deg);
+	-moz-transform: rotate(270deg);
+	-o-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+
+
+.text-right {
+	text-align: right;
+}
+
+.footer {
+    text-align: center;
+	-webkit-box-shadow: 0 -1px 10px rgba(0,0,0,.1);
+	-moz-box-shadow: 0 -1px 10px rgba(0,0,0,.1);
+	-o-box-shadow: 0 -1px 10px rgba(0,0,0,.1);
+	-ms-box-shadow: 0 -1px 10px rgba(0,0,0,.1);
+    box-shadow: 0 -1px 10px rgba(0,0,0,.1);	
+}
+
+.social {
+	font-size: 32px;
+}
+
+.social i {
+    text-align: center;
+    color: #ccc;
+    background: #09c;
+    border: 1px solid #999;
+    border-radius: 20px;
+    padding: 20px;
 }
 
 #work .row {
     margin-left: 0;
 }
 
+li.repo {
+    height: 250px;
+    width: 220px;
+	background: none repeat scroll 0 0 rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+	display: inline;
+    float: left;
+    margin-left: 40px;
+    margin-right: 40px;
+    position: relative;
+}
+
+li.repo > a {
+    color: inherit;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    text-decoration: none;
+    width: 100%;
+}
+
+
+li.repo h2 {
+    margin-bottom: 2px;
+    max-width: 160px;
+    overflow: hidden;
+	color: #0084B4;
+    font-size: 20px;
+	line-height: 24px;
+    font-weight: bold;
+	word-wrap: break-word;
+}
+li.repo h2, li.repo h3, li.repo p {
+    margin: 10px 15px;
+	padding: 0;
+}
+
+li.repo h3 {
+    color: #999999;
+    font-size: 11px;
+    margin-bottom: 15px;
+    margin-top: 2px;
+}
+
+.repo:after {
+    border-bottom: 50px solid transparent;
+    border-left: 50px solid transparent;
+    border-right: 50px solid #0080B0;
+    content: "";
+    height: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+}
+
+.repo.jekyll::after {
+	border-right-color: black;
+}
+
+.repo.bootstrap::after {
+	border-right-color: #05C;
+}
+
+.repo.jquery::after {
+	border-right-color: #5DB0E6;
+}
+
+.repo.game::after {
+	border-right-color: #f7ef00;
+}
+
+.form-actions {
+	background: transparent;
+}
+
+/* animations for active tabs - start*/
+
+section *{
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+	-ms-transition: 0.5s;
+	transition: 0.5s;
+}
+
+section .page-header {
+	-webkit-transform: translateX(150px);
+	-moz-transform: translateX(150px);
+	-o-transform: translateX(150px);
+	-ms-transform: translateX(150px);
+	transform: translateX(150px);
+	opacity: 0.1;
+}
+
+.bittu-quote {
+	-webkit-transform: scale(0.5);
+	-moz-transform: scale(0.5);
+	-o-transform: scale(0.5);
+	-ms-transform: scale(0.5);
+	transform: scale(0.5);
+}
+
+.pic-container {
+	-webkit-perspective: 600;
+}
+
+.pic-container dl {
+	text-shadow: 0 0 1px hsla(0, 0%, 30%, 0.4);
+
+}
+.my-pic {
+	-webkit-transform-style: preserve-3d;	
+}
+
+.repo {
+	-webkit-transform: scale(0.5);
+	-moz-transform: scale(0.5);
+	-o-transform: scale(0.5);
+	-ms-transform: scale(0.5);
+	transform: scale(0.5);
+	opacity: 0.2;
+}
+
+section.active .bittu-quote {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+
+section.active .page-header {
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	-o-transform: translateX(0px);
+	-ms-transform: translateX(0px);
+	transform: translateX(0px);
+	opacity: 1;
+}
+
+section.active .my-pic {
+	-webkit-transform: rotate3d(0, 1, 0, -30deg);
+}
+
+section.active .my-pic:hover {
+	-webkit-transform: rotate3d(0, 1, 0, 0deg);
+}
+
+section.active .repo {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	opacity: 0.8;
+}
+
+section.active .repo:hover {
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+	opacity: 1;
+	-webkit-box-shadow: 3px 3px 5px 6px #ccc;
+	-moz-box-shadow: 3px 3px 5px 6px #ccc;
+	-o-box-shadow: 3px 3px 5px 6px #ccc;
+	-ms-box-shadow: 3px 3px 5px 6px #ccc;
+	box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+/* animations for active tabs - end */
 
 @media (min-width: 768px) and (max-width: 979px) {
 	.thumbnails>li.tile {
@@ -161,29 +396,33 @@ body {
 	.thumbnails>li.tile {
 		float: none;
 	}
+	
+	body {
+		overflow: auto;
+	}
+	
+	.container-fluid section {
+		height: auto;
+	}
 }
 
-@media (max-width: 480px) {
-	section {
-		/*margin-top: -30px;*/
-	}
+@media (max-width: 480px) {	
 	.thumbnails>li.tile {
 		float: none;
-	}	
+	}
+	
+	body {
+		overflow: auto;
+	}
+	
+	.container-fluid section {
+		height: auto;
+	}
+	
+	li.repo {
+		width: 200px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
 }
 
-
-.text-right {
-	text-align: right;
-}
-
-.about dd {
-    /*padding: 7px 0;*/
-}
-
-.footer {
-    text-align: center;
-	-webkit-box-shadow: 0 -1px 10px rgba(0,0,0,.1);
-	-moz-box-shadow: 0 -1px 10px rgba(0,0,0,.1);
-	box-shadow: 0 -1px 10px rgba(0,0,0,.1);
-}

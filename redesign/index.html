@@ -1,62 +1,35 @@
+
 <!doctype html>
 <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
-        <meta name="description" content="">
-        <meta name="author" content="">    
+        <meta name="description" content="bittu's portfolio">
+        <meta name="author" content="Sandeep Vemula">
+		<meta name="author" content="bittu">
         <meta name="viewport" content="width=device-width">
         
         <title>Redesign</title>
         
-        <link rel="stylesheet"
-			href="//fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic,bold" title="roboto">
         <link rel="stylesheet" href="css/metro-bootstrap.css">
-        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="css/default.css">		
+		<link rel="stylesheet" href="css/font-awesome.css">
+		<!--[if IE 7]>
+			<link rel="stylesheet" href="css/font-awesome-ie7.css">
+		<![endif]-->
 
     </head>
     <body data-spy="scroll" data-target=".navigation">
-        
+        <div id="hover">
+			
+		</div>
         <div id="main">            
-        <!--
-            <div class="navbar navbar-fixed-left">
-                <div class="navbar-inner">
-                    <div class="container">                       
-                        <div class="nav-collapse collapse">
-                            <ul class="nav">
-                                <li class="active"><a href="#about" data-role="scroll">About</a></li>
-                                <li class=""><a href="#work" data-role="scroll">Work</a></li>
-                                <li class=""><a href="#contact" data-role="scroll">Contact</a></li>
-                            </ul>
-                        </div>
-						 <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </a>
-                        <a class="brand" href="/">bittu.github.com</a>
-                    </div>
-                </div>
-            </div>
-            -->
-            <!--
-            <div class="navbar navbar-fixed-left">
-                <div class="navbar-inner">
-                    <ul id="nav" class="nav">
-                        <li class="active"><a href="#about" data-role="scroll">About</a></li>
-                        <li class=""><a href="#work" data-role="scroll">Work</a></li>
-                        <li class=""><a href="#contact" data-role="scroll">Contact</a></li>
-                    </ul>
-                    <a class="brand" href="/">bittu.github.com</a>
-                </div>
-            </div>
-            -->
-            <div class="navigation">
+            <div class="navigation" id="navigation">
                 <ul id="nav" class="nav">
                     <li class="active"><a href="#about" data-role="scroll">About</a></li>
                     <li class=""><a href="#work" data-role="scroll">Work</a></li>
-                    <li class=""><a href="#contact" data-role="scroll">Contact</a></li>
-                    <li class="brand"><a class="brand" href="/">./ bittu.github.com</a></li>
+                    <li class=""><a href="#contact" data-role="scroll">Contact</a></li>					
+                    <li class="brand"><a class="brand" href="/">./bittu</a></li>
                 </ul>
             </div>
             <div class="container-fluid">
@@ -76,16 +49,16 @@
                                     </h2>
                             </blockquote>
                         </div>
-                        <div class="span5">
-                            <ul class="thumbnails pull-right">
+                        <div class="span5 pic-container">
+                            <ul class="thumbnails pull-right my-pic">
                                 <li class="span3 tile"></li>
                             </ul>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="span4 pull-right text-right">
+                        <div class="span5 offset6 text-right pic-container">
 							<h4 class="">
-								<dl class="about">
+								<dl class="about my-pic">
 									<dt>-bittu</dt>
 									<dd></dd>
 									<dt>-a web-dev</dt>
@@ -115,15 +88,8 @@
                         </h1>
                     </div>
 					<div class="row">
-					<ul class="thumbnails">
-                        <li class="span3 tile"></li>
-						<li class="span3 tile"></li>
-						<li class="span3 tile"></li>
-						<li class="span3 tile"></li>
-						<li class="span3 tile"></li>
-						<li class="span3 tile"></li>
-						<li class="span3 tile"></li>
-						<li class="span3 tile"></li>
+					<ul class="thumbnails" id="repos">
+                        
                     </ul>
 					</div>
 				</section>
@@ -134,59 +100,138 @@
                             <small> me</small>
                         </h1>
                     </div>
-					<form class="form-horizontal">
-					  <fieldset>
-						<div class="control-group">
-						  <label class="control-label" for="contactName">Name</label>
-						  <div class="controls">
-							<input type="text" class="input-xlarge" id="contactName">							
-						  </div>
+					<div class="row">
+						<div class="span5">
+							<form class="form-horizontal">
+							  <fieldset>
+								<div class="control-group">
+								  <label class="control-label" for="contactName">Name</label>
+								  <div class="controls">
+									<input type="text" class="input-xlarge" id="contactName">
+								  </div>
+								</div>
+								<div class="control-group">
+								  <label class="control-label" for="contactEmail">Email</label>
+								  <div class="controls">
+									<input type="text" class="input-xlarge" id="contactEmail">
+								  </div>
+								</div>
+								<div class="control-group">
+								  <label class="control-label" for="contactMessage">Message</label>
+								  <div class="controls">
+									<textarea class="input-xlarge" id="contactMessage"></textarea>
+								  </div>
+								</div>
+								<div class="form-actions">
+									<input type="submit" class="btn btn-large btn-primary" value="Submit">
+									<input class="btn btn-large btn-danger" type="reset">
+								</div>
+							  </fieldset>
+							</form>
 						</div>
-						<div class="control-group">
-						  <label class="control-label" for="contactEmail">Email</label>
-						  <div class="controls">
-							<input type="text" class="input-xlarge" id="contactEmail">							
-						  </div>
+						<div class="span4 social">
+							<a href="#"><i class="icon-facebook"></i></a>
 						</div>
-						<div class="control-group">
-						  <label class="control-label" for="contactMessage">Message</label>
-						  <div class="controls">
-							<textarea class="input-xlarge" id="contactMessage"></textarea>							
-						  </div>
-						</div>
-						<div class="form-actions">
-							<input type="submit" class="btn btn-large btn-primary" value="Submit">
-							<input class="btn btn-large" type="reset">
-						</div>
-					  </fieldset>
-					</form>
+					</div>
+					
+					 <footer class="footer">
+						<p>Copyright &copy; 2013 @ Sandeep Vemula <i>aka</i> bittu</p>
+					</footer>
 				</section>
                 
-            
-                <footer class="footer">
-                    <p>Copyright &copy; 2013 @ Sandeep Vemula <i>aka</i> bittu</p>
-                </footer>
             </div>
         </div>
+		<script id="sampleTemplate" type="text/x-jquery-tmpl">
+		<li class="repo ${classification}">
+			<a href="${homepage}">
+				<h2>${name}</h2>
+				<h3>${caption}</h3>
+				<p>${description}</p>
+			</a>
+		</li>
+		</script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
         <script type="text/javascript">
             window.jQuery || document.write('<script type="text/javascript" src="js/jquery-1.9.0.min.js"><\/script>')
         </script>
+		
         <script src="js/jquery.easing.1.3.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap-scrollspy.js"></script>
+		<script src="js/jquery.tmpl.min.js"></script>		
+		
         <script>
             $(document).ready(function(){
                 
-                var $main = $("#main");
-                
                 $("a[data-role=scroll]").click(function(){
-                    var $el = $("#"+$(this).data("click"));
-                    var leftOffset = $el.offset().left;
-                    var mainLeftOffset = $main.offset().left;
-                    $("#main").animate({ left: mainLeftOffset-leftOffset }, 1000, 'easeOutBounce');
-                    return false;
+					var elementClicked = $(this).attr("href");
+					var destination = $(elementClicked).offset().top;
+					$("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination}, 1000, 'easeInOutExpo');
                 });
-                
+				
+				$("ul.nav li").on("activate", function() {
+					var hash = $(this).find('a').attr("href");
+					$("section.active").removeClass("active");
+					$(hash).addClass("active");
+					location.hash = hash;
+				});
+                				
+				var excludeRepoNames = ["bittu.github.com", "bootstrap-backbone-table-test"];
+	
+				var captions = {
+					"folderGrid": "a jQuery Plugin"
+					,"bootstrap-sorter": "a twitter bootstrap Plugin"
+					,"multicheck": "a jQuery Plugin"
+					,"JBThemes.ordered-list": "a theme for jekyll bootstrap"
+					,"JBThemes.the-blog": "a theme for jekyll bootstrap"
+				};
+
+				var classifications = {
+					"folderGrid": "jquery"
+					,"bootstrap-sorter": "bootstrap"
+					,"multicheck": "jquery"
+					,"JBThemes.ordered-list": "jekyll"
+					,"JBThemes.the-blog": "jekyll"
+					,"hidden-tiles": "game"
+				};
+				
+				function excludePrepareRepoObjects(data) {
+					var moddedData = [];
+					
+					for(var key in data) {
+						var repo = data[key];
+						
+						if($.inArray(repo.name, excludeRepoNames) === -1) {
+							repo.caption = captions[repo.name];
+							repo.classification = classifications[repo.name];
+							moddedData.push(repo);
+						}
+					}
+					
+					return moddedData;
+				}
+				
+				function getRepos() {
+					$.getJSON("https://api.github.com/users/bittu/repos?callback=?"
+						, function(result) {
+							var moddedData = excludePrepareRepoObjects(result.data);							
+							$( "#sampleTemplate" ).tmpl( moddedData ).appendTo( "#repos" );
+							
+							if(location.hash === "") {
+								setTimeout(function(){
+									$("#hover").slideUp('slow', function(){location.hash = "about";});
+								}, 500);
+							}
+							else {
+								var hash = location.hash;
+								location.hash = "";
+								setTimeout(function(){
+									$("#hover").slideUp('slow', function(){location.hash = hash;});
+								}, 500);
+							}
+					});
+				}
+				
+				getRepos();
             });
           
         </script>
