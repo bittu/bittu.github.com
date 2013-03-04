@@ -13,18 +13,50 @@
 			href="//fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic,bold" title="roboto">
         <link rel="stylesheet" href="css/metro-bootstrap.css">
         <link rel="stylesheet" href="css/default.css">
-		<script src="js/prefixfree.min.js"></script>
 
     </head>
     <body data-spy="scroll" data-target=".navigation">
         
         <div id="main">            
+        <!--
+            <div class="navbar navbar-fixed-left">
+                <div class="navbar-inner">
+                    <div class="container">                       
+                        <div class="nav-collapse collapse">
+                            <ul class="nav">
+                                <li class="active"><a href="#about" data-role="scroll">About</a></li>
+                                <li class=""><a href="#work" data-role="scroll">Work</a></li>
+                                <li class=""><a href="#contact" data-role="scroll">Contact</a></li>
+                            </ul>
+                        </div>
+						 <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="/">bittu.github.com</a>
+                    </div>
+                </div>
+            </div>
+            -->
+            <!--
+            <div class="navbar navbar-fixed-left">
+                <div class="navbar-inner">
+                    <ul id="nav" class="nav">
+                        <li class="active"><a href="#about" data-role="scroll">About</a></li>
+                        <li class=""><a href="#work" data-role="scroll">Work</a></li>
+                        <li class=""><a href="#contact" data-role="scroll">Contact</a></li>
+                    </ul>
+                    <a class="brand" href="/">bittu.github.com</a>
+                </div>
+            </div>
+            -->
             <div class="navigation">
                 <ul id="nav" class="nav">
                     <li class="active"><a href="#about" data-role="scroll">About</a></li>
                     <li class=""><a href="#work" data-role="scroll">Work</a></li>
                     <li class=""><a href="#contact" data-role="scroll">Contact</a></li>
-                    <li class="brand"><a class="brand" href="/">./bittu.github.com</a></li>
+                    <li class="brand"><a class="brand" href="/">./ bittu.github.com</a></li>
                 </ul>
             </div>
             <div class="container-fluid">
@@ -51,7 +83,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="span5 offset6 text-right">
+                        <div class="span4 pull-right text-right">
 							<h4 class="">
 								<dl class="about">
 									<dt>-bittu</dt>
@@ -128,40 +160,33 @@
 						</div>
 					  </fieldset>
 					</form>
-					
-					 <footer class="footer">
-						<p>Copyright &copy; 2013 @ Sandeep Vemula <i>aka</i> bittu</p>
-					</footer>
 				</section>
                 
+            
+                <footer class="footer">
+                    <p>Copyright &copy; 2013 @ Sandeep Vemula <i>aka</i> bittu</p>
+                </footer>
             </div>
         </div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
         <script type="text/javascript">
             window.jQuery || document.write('<script type="text/javascript" src="js/jquery-1.9.0.min.js"><\/script>')
         </script>
-		
         <script src="js/jquery.easing.1.3.js"></script>
-        <script src="js/bootstrap-scrollspy.js"></script>
-		
+        <script src="js/bootstrap.min.js"></script>
         <script>
             $(document).ready(function(){
                 
-                $("a[data-role=scroll]").click(function(){
-					var elementClicked = $(this).attr("href");
-					var destination = $(elementClicked).offset().top;
-					$("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination}, 1000, 'easeInOutExpo');
-                });
-				
-				$("ul.nav li").on("activate", function() {
-					$("section.active").removeClass("active");
-					$($(this).find('a').attr("href")).addClass("active");
-				});
+                var $main = $("#main");
                 
-				setTimeout(function(){
-				if(location.hash === "") {
-					location.hash = "about";
-				}}, 1000);
+                $("a[data-role=scroll]").click(function(){
+                    var $el = $("#"+$(this).data("click"));
+                    var leftOffset = $el.offset().left;
+                    var mainLeftOffset = $main.offset().left;
+                    $("#main").animate({ left: mainLeftOffset-leftOffset }, 1000, 'easeOutBounce');
+                    return false;
+                });
+                
             });
           
         </script>
