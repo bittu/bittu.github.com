@@ -12,15 +12,11 @@
         <title>Redesign</title>
         
         <link rel="stylesheet" href="css/metro-bootstrap.css">
-<<<<<<< HEAD
         <link rel="stylesheet" href="css/default.css">		
 		<link rel="stylesheet" href="css/font-awesome.css">
 		<!--[if IE 7]>
 			<link rel="stylesheet" href="css/font-awesome-ie7.css">
 		<![endif]-->
-=======
-        <link rel="stylesheet" href="css/default.css">
->>>>>>> branch 'master' of https://github.com/bittu/bittu.github.com.git
 
     </head>
     <body data-spy="scroll" data-target=".navigation">
@@ -28,54 +24,12 @@
 			
 		</div>
         <div id="main">            
-<<<<<<< HEAD
             <div class="navigation" id="navigation">
-=======
-        <!--
-            <div class="navbar navbar-fixed-left">
-                <div class="navbar-inner">
-                    <div class="container">                       
-                        <div class="nav-collapse collapse">
-                            <ul class="nav">
-                                <li class="active"><a href="#about" data-role="scroll">About</a></li>
-                                <li class=""><a href="#work" data-role="scroll">Work</a></li>
-                                <li class=""><a href="#contact" data-role="scroll">Contact</a></li>
-                            </ul>
-                        </div>
-						 <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </a>
-                        <a class="brand" href="/">bittu.github.com</a>
-                    </div>
-                </div>
-            </div>
-            -->
-            <!--
-            <div class="navbar navbar-fixed-left">
-                <div class="navbar-inner">
-                    <ul id="nav" class="nav">
-                        <li class="active"><a href="#about" data-role="scroll">About</a></li>
-                        <li class=""><a href="#work" data-role="scroll">Work</a></li>
-                        <li class=""><a href="#contact" data-role="scroll">Contact</a></li>
-                    </ul>
-                    <a class="brand" href="/">bittu.github.com</a>
-                </div>
-            </div>
-            -->
-            <div class="navigation">
->>>>>>> branch 'master' of https://github.com/bittu/bittu.github.com.git
                 <ul id="nav" class="nav">
                     <li class="active"><a href="#about" data-role="scroll">About</a></li>
                     <li class=""><a href="#work" data-role="scroll">Work</a></li>
-<<<<<<< HEAD
                     <li class=""><a href="#contact" data-role="scroll">Contact</a></li>					
                     <li class="brand"><a class="brand" href="/">./bittu</a></li>
-=======
-                    <li class=""><a href="#contact" data-role="scroll">Contact</a></li>
-                    <li class="brand"><a class="brand" href="/">./ bittu.github.com</a></li>
->>>>>>> branch 'master' of https://github.com/bittu/bittu.github.com.git
                 </ul>
             </div>
             <div class="container-fluid">
@@ -102,11 +56,7 @@
                         </div>
                     </div>
                     <div class="row">
-<<<<<<< HEAD
                         <div class="span5 offset6 text-right pic-container">
-=======
-                        <div class="span4 pull-right text-right">
->>>>>>> branch 'master' of https://github.com/bittu/bittu.github.com.git
 							<h4 class="">
 								<dl class="about my-pic">
 									<dt>-bittu</dt>
@@ -182,32 +132,13 @@
 						<div class="span4 social">
 							<a href="#"><i class="icon-facebook"></i></a>
 						</div>
-<<<<<<< HEAD
 					</div>
 					
 					 <footer class="footer">
 						<p>Copyright &copy; 2013 @ Sandeep Vemula <i>aka</i> bittu</p>
 					</footer>
-=======
-						<div class="control-group">
-						  <label class="control-label" for="contactMessage">Message</label>
-						  <div class="controls">
-							<textarea class="input-xlarge" id="contactMessage"></textarea>							
-						  </div>
-						</div>
-						<div class="form-actions">
-							<input type="submit" class="btn btn-large btn-primary" value="Submit">
-							<input class="btn btn-large" type="reset">
-						</div>
-					  </fieldset>
-					</form>
->>>>>>> branch 'master' of https://github.com/bittu/bittu.github.com.git
 				</section>
                 
-            
-                <footer class="footer">
-                    <p>Copyright &copy; 2013 @ Sandeep Vemula <i>aka</i> bittu</p>
-                </footer>
             </div>
         </div>
 		<script id="sampleTemplate" type="text/x-jquery-tmpl">
@@ -223,18 +154,14 @@
         <script type="text/javascript">
             window.jQuery || document.write('<script type="text/javascript" src="js/jquery-1.9.0.min.js"><\/script>')
         </script>
+		
         <script src="js/jquery.easing.1.3.js"></script>
-<<<<<<< HEAD
         <script src="js/bootstrap-scrollspy.js"></script>
 		<script src="js/jquery.tmpl.min.js"></script>		
 		
-=======
-        <script src="js/bootstrap.min.js"></script>
->>>>>>> branch 'master' of https://github.com/bittu/bittu.github.com.git
         <script>
             $(document).ready(function(){
                 
-<<<<<<< HEAD
                 $("a[data-role=scroll]").click(function(){
 					var elementClicked = $(this).attr("href");
 					var destination = $(elementClicked).offset().top;
@@ -305,18 +232,6 @@
 				}
 				
 				getRepos();
-=======
-                var $main = $("#main");
-                
-                $("a[data-role=scroll]").click(function(){
-                    var $el = $("#"+$(this).data("click"));
-                    var leftOffset = $el.offset().left;
-                    var mainLeftOffset = $main.offset().left;
-                    $("#main").animate({ left: mainLeftOffset-leftOffset }, 1000, 'easeOutBounce');
-                    return false;
-                });
-                
->>>>>>> branch 'master' of https://github.com/bittu/bittu.github.com.git
             });
           
         </script>
