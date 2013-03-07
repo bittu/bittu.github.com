@@ -118,6 +118,7 @@ blockquote {
     text-shadow: rgba(0, 0, 0, 0) 0px 0px 0px;
     text-transform: lowercase;
     width: 92px;
+    cursor: pointer;
 }
 
 #nav li.brand {
