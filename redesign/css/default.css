@@ -118,6 +118,7 @@ blockquote {
     text-shadow: rgba(0, 0, 0, 0) 0px 0px 0px;
     text-transform: lowercase;
     width: 92px;
+	cursor: pointer;
 }
 
 #nav li.brand {
@@ -197,10 +198,50 @@ blockquote {
 	font-size: 32px;
 }
 
+.social a {
+	position: relative;
+}
+
+.social a:hover {
+	text-decoration: none;
+}
+
 .social i {
+	color: #222;
+	background: #EEE;
+}
+
+.social i.icon-facebook {
     text-align: center;
-    color: #ccc;
-    background: #09c;
+    /*color: #eee;
+    background: #3b5998;*/
+    border: 1px solid #999;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.social i.icon-twitter {
+    text-align: center;
+    /*color: #eee;
+    /*background: #2FD6FF;*/
+    border: 1px solid #999;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.social i.icon-google-plus {
+    text-align: center;
+    /*color: #eee;
+    /*background: #d34836;*/
+    border: 1px solid #999;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.social i.icon-github {
+    text-align: center;
+    /*color: #eee;
+    /*background: #405a6a;*/
     border: 1px solid #999;
     border-radius: 20px;
     padding: 20px;
@@ -286,6 +327,18 @@ li.repo h3 {
 
 .form-actions {
 	background: transparent;
+}
+
+.arrow-down {
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 50px solid #2e8bcc;
+}
+
+.contact-text {
+	display: inline;
 }
 
 /* animations for active tabs - start*/
