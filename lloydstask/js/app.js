@@ -42,7 +42,7 @@
 
         completeTodo: function (elem) {
             elem.parentElement.classList.add('completed');
-            todoapp.todos[elem.dataset.index].completed = true;
+            todoapp.todos[elem.getAttribute("data-index")].completed = true;
         },
 
         currentPage: 1,
