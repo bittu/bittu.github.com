@@ -1,0 +1,80 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+body.progress {
+    opacity: 0.5;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+.tick:before {
+    content: "\2714 ";
+}
+.back:before {
+    content: "\27f5 ";
+}
+.next:before {
+    content: "\27f6 ";
+}
+.todoapp {
+    margin: 0 auto;
+    width: 50%;
+    position: relative;
+    top: 25%;
+}
+.todoapp header {
+    background: #006A4D;
+    color: #fff;
+    margin: 0;
+}
+.todoapp header .tick {
+    color: #aaa;
+}
+.todoapp header h3 {
+    margin: 0;
+    display: inline-block;
+    padding-left: 10px;
+}
+ul.todolist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul.todolist li:nth-child(2n) {
+    background: #eee;
+}
+header .tick,
+ul.todolist li .complete,
+ul.todolist li .item {
+    padding: 10px;
+    display: inline-block;
+}
+.todolist li .tick {
+    color: #000;
+}
+.todolist li.completed .tick,
+.todolist li.completed .item {
+    color: #ccc;
+}
+.todolist li.completed .item {
+    text-decoration: line-through;
+}
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+nav .back,
+nav .next {
+    padding: 10px 20px;
+    background: #454545;
+    color: #fff;
+}
+nav .page {
+    padding: 10px 20px;
+    display: inline-block;
+}
