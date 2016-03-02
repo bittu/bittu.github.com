@@ -61,15 +61,11 @@
         renderPage: function () {
             var i = (todoapp.currentPage - 1) * todoapp.noOfItemsPerPage,
                 maxItemsInCurrPage = todoapp.currentPage * todoapp.noOfItemsPerPage,
-                docFrag = document.createDocumentFragment(),
-                temp;
+                itemsHtml = '';
             for (; i < maxItemsInCurrPage; i++) {
-                temp = document.createElement("template");
-                temp.innerHTML = todoapp.template(todoapp.todos[i], i);
-                docFrag.appendChild(temp.content);
+                itemsHtml += todoapp.template(todoapp.todos[i], i);
             }
-            todoapp.todoElem.innerHTML = '';
-            todoapp.todoElem.appendChild(docFrag);
+            todoapp.todoElem.innerHTML = itemsHtml;
             todoapp.pageNoElem.textContent = todoapp.currentPage;
         },
 
