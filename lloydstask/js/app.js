@@ -4,8 +4,7 @@
 
         todos: [],
 
-        //url: 'http://jsonplaceholder.typicode.com/todos',
-        url: 'js/data.json',
+        url: 'http://jsonplaceholder.typicode.com/todos',
 
         init: function () {
             window.ajax(todoapp.url, function (list) {
