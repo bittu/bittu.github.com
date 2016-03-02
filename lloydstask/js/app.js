@@ -26,7 +26,7 @@
         bindEvents: function () {
             todoapp.todoElem.addEventListener("click", function (e) {
                 e.preventDefault();
-                if (e.target && e.target.matches("a.complete")) {
+                if (e.target && e.target.nodeName === 'A') {
                     todoapp.completeTodo(e.target);
                 }
             });
