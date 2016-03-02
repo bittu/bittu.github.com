@@ -18,7 +18,7 @@
         template: function (todo, index) {
             return '<li ' + (todo.completed ? 'class="completed"' : '') + '>' +
                 '<a href="#" class="tick complete" data-index="' + index + '"></a>' +
-                '<span class="item">' + todo.title + '</span>'
+                '<span class="item">' + todo.title + '</span>' +
                 '</li>';
         },
 
@@ -43,7 +43,7 @@
 
         completeTodo: function (elem) {
             elem.parentElement.classList.add('completed');
-            todoapp.todos[elem.getAttribute("data-index")].completed = true;
+            todoapp.todos[elem.dataset.index].completed = true;
         },
 
         currentPage: 1,
