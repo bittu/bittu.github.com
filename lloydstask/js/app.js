@@ -18,7 +18,8 @@
         template: function (todo, index) {
             return '<li ' + (todo.completed ? 'class="completed"' : '') + '>' +
                 '<a href="#" class="tick complete" data-index="' + index + '"></a>' +
-                '<span class="item">' + todo.title + '</span>';
+                '<span class="item">' + todo.title + '</span>'
+                '</li>';
         },
 
         todoElem: document.getElementById("todolist"),
